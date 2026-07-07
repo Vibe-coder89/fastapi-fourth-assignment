@@ -1,0 +1,11 @@
+1. Why should the movie ID come from the URL instead of the request body?
+
+The movie ID should come from the URL because it uniquely identifies which movie resource needs to be updated.
+The request body should only contain the new data for that movie.
+Keeping the ID in the URL follows REST API conventions and makes the endpoint clear and easy to use.
+
+2. Why should PUT not increase the number of records?
+
+A PUT request is used to update an existing resource, not create a new one.
+It should replace or modify the existing movie while keeping the total number of records the same.
+If the movie does not exist, the API should return a 404 Not Found error instead of adding a new record.
